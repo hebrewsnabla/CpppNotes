@@ -1,0 +1,23 @@
+8 byte = 1 B
+1 word = 4/8 B, or 32/64 byte
+1 memory address: 1 B
+
+C++                byte   B
+bool
+char               8      1
+wchar_t(wide)      16     2
+char16_t(unicode)  16     2
+char32_t(unicode)  16     2
+short              16     2
+int                16     2
+long               32     4
+long long          64     8
+float(6)           32     4
+double(10)         64     8
+long double(10)    96/128 12/16
+
+type convert
+double -> int         3.7 -> 3
+long -> unsigned int  a -> a%(sizeof(unsigned int))
+long -> int           undefined
+do not mix(e.g. add) signed and unsigned types!
